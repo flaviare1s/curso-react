@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -10,6 +8,7 @@ function App() {
     <>
       <div>
         <h1>Hello World 2!</h1>
+        <p className='paragrafo'>Mais um elemento adicionado para a tarefa do curso.</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
