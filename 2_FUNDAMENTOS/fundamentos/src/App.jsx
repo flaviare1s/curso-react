@@ -4,6 +4,7 @@ import { TemplateExpressions } from './components/TemplateExpressions'
 
 import './App.css'
 import { MyComponent } from './components/MyComponent'
+import { Events } from './components/Events'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <FirstComponent />
       <TemplateExpressions />
       <MyComponent />
+      <Events />
     </div>
   )
 }
