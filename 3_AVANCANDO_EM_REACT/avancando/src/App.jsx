@@ -25,7 +25,9 @@ function App() {
       < ListRender />
       < ConditionalRender />
       < ShowUserName name="Matheus" />
-      < CarDetails brand="Fiat" km={1000000} color="Azul" />
+      < CarDetails brand="Fiat" km={1000000} color="Azul" newCar={false}/>
+      < CarDetails brand="Ford" km={0} color="Vermelha" newCar={true} />
+      < CarDetails brand="Fiat" km={200000} color="Preta" newCar={false} />
     </div>
   )
 }
