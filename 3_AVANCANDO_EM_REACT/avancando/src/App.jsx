@@ -45,7 +45,7 @@ export function App() {
           km={car.km} 
           newCar={car.newCar} />
       ))}
-      < Fragment />
+      < Fragment propFragment="teste" />
     </div>
   )
 }
