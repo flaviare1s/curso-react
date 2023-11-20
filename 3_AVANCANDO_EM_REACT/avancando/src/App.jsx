@@ -7,14 +7,12 @@ import { ListRender } from './components/ListRender'
 import { ManageData } from './components/ManageData'
 import { ShowUserName } from './components/ShowUserName'
 
-function App() {
+export function App() {
   const cars = [
     {id: 1, brand: 'Ferrari', Color: 'Amarela', newCar: true, km: 0},
     {id: 2, brand: 'KIA', Color: 'Branca', newCar: false, km: 34343},
     {id: 3, brand: 'Renault', Color: 'Azul', newCar: false, km: 234},
   ]
-
-
 
   return (
     <div className='App'>
@@ -38,15 +36,14 @@ function App() {
       < CarDetails brand="Fiat" km={200000} color="Preta" newCar={false} />
       {/* Loop em array de objeto: */}
       {cars.map((car) => (
-        < CarDetails
-          brand={car.branch}
-          color={car.color}
-          km={car.km}
-          newCar={car.newCar}
-        />
+        < CarDetails 
+          key={car.id}
+          brand={car.brand} 
+          color={car.color} 
+          km={car.km} 
+          newCar={car.newCar} />
       ))}
     </div>
   )
 }
 
-export default App
