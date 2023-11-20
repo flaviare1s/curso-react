@@ -8,6 +8,14 @@ import { ManageData } from './components/ManageData'
 import { ShowUserName } from './components/ShowUserName'
 
 function App() {
+  const cars = [
+    {id: 1, brand: 'Ferrari', Color: 'Amarela', newCar: true, km: 0},
+    {id: 2, brand: 'KIA', Color: 'Branca', newCar: false, km: 34343},
+    {id: 3, brand: 'Renault', Color: 'Azul', newCar: false, km: 234},
+  ]
+
+
+
   return (
     <div className='App'>
       <h1>Avançando em React</h1>
@@ -28,6 +36,15 @@ function App() {
       < CarDetails brand="Fiat" km={1000000} color="Azul" newCar={false}/>
       < CarDetails brand="Ford" km={0} color="Vermelha" newCar={true} />
       < CarDetails brand="Fiat" km={200000} color="Preta" newCar={false} />
+      {/* Loop em array de objeto: */}
+      {cars.map((car) => (
+        < CarDetails
+          brand={car.branch}
+          color={car.color}
+          km={car.km}
+          newCar={car.newCar}
+        />
+      ))}
     </div>
   )
 }
