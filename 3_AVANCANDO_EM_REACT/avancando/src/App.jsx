@@ -14,6 +14,7 @@ import { Fragment } from './components/Fragment'
 import { Container } from './components/Container'
 import { ExecuteFunction } from './components/ExecuteFunction'
 import { Message } from './components/Message'
+import { ChangeMessageState } from './components/ChangeMessageState'
 
 export function App() {
   const cars = [
@@ -70,6 +71,7 @@ export function App() {
       </Container>
       <ExecuteFunction myFunction={showMessage} />
       <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   )
 }
