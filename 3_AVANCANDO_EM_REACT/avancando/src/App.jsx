@@ -15,6 +15,7 @@ import { Container } from './components/Container'
 import { ExecuteFunction } from './components/ExecuteFunction'
 import { Message } from './components/Message'
 import { ChangeMessageState } from './components/ChangeMessageState'
+import { UserDetail } from './components/UserDetail'
 
 export function App() {
   const cars = [
@@ -72,6 +73,7 @@ export function App() {
       <ExecuteFunction myFunction={showMessage} />
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      <UserDetail />
     </div>
   )
 }
