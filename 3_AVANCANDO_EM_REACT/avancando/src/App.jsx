@@ -2,6 +2,9 @@
 import './App.css'
 
 import City from "./assets/city.jpg"
+
+import { useState } from "react"
+
 import { CarDetails } from './components/CarDetails'
 import { ConditionalRender } from './components/ConditionalRender'
 import { ListRender } from './components/ListRender'
@@ -10,6 +13,7 @@ import { ShowUserName } from './components/ShowUserName'
 import { Fragment } from './components/Fragment'
 import { Container } from './components/Container'
 import { ExecuteFunction } from './components/ExecuteFunction'
+import { Message } from './components/Message'
 
 export function App() {
   const cars = [
@@ -20,6 +24,12 @@ export function App() {
 
   function showMessage() {
     console.log('Evento do componente pai!')
+  }
+
+  const [message, SetMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    SetMessage(msg)
   }
 
   return (
@@ -35,30 +45,31 @@ export function App() {
          {/* Imagem em assets */}
         <img src={City} alt="Cidade" />
       </div>
-      < ManageData />
-      < ListRender />
-      < ConditionalRender />
-      < ShowUserName name="Matheus" />
-      < CarDetails brand="Fiat" km={1000000} color="Azul" newCar={false}/>
-      < CarDetails brand="Ford" km={0} color="Vermelha" newCar={true} />
-      < CarDetails brand="Fiat" km={200000} color="Preta" newCar={false} />
+      <ManageData />
+      <ListRender />
+      <ConditionalRender />
+      <ShowUserName name="Matheus" />
+      <CarDetails brand="Fiat" km={1000000} color="Azul" newCar={false}/>
+      <CarDetails brand="Ford" km={0} color="Vermelha" newCar={true} />
+      <CarDetails brand="Fiat" km={200000} color="Preta" newCar={false} />
       {/* Loop em array de objeto: */}
       {cars.map((car) => (
-        < CarDetails 
+        <CarDetails 
           key={car.id}
           brand={car.brand} 
           color={car.color} 
           km={car.km} 
           newCar={car.newCar} />
       ))}
-      < Fragment propFragment="teste" />
+      <Fragment propFragment="teste" />
       <Container>
         <p>Este é o conteúdo</p>
       </Container>
       <Container>
         <p>Testando o container</p>
       </Container>
-      < ExecuteFunction myFunction={showMessage} />
+      <ExecuteFunction myFunction={showMessage} />
+      <Message msg={message} />
     </div>
   )
 }
