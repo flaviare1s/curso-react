@@ -9,6 +9,7 @@ import { ManageData } from './components/ManageData'
 import { ShowUserName } from './components/ShowUserName'
 import { Fragment } from './components/Fragment'
 import { Container } from './components/Container'
+import { ExecuteFunction } from './components/ExecuteFunction'
 
 export function App() {
   const cars = [
@@ -16,6 +17,10 @@ export function App() {
     {id: 2, brand: 'KIA', Color: 'Branca', newCar: false, km: 34343},
     {id: 3, brand: 'Renault', Color: 'Azul', newCar: false, km: 234},
   ]
+
+  function showMessage() {
+    console.log('Evento do componente pai!')
+  }
 
   return (
     <div className='App'>
@@ -53,6 +58,7 @@ export function App() {
       <Container>
         <p>Testando o container</p>
       </Container>
+      < ExecuteFunction myFunction={showMessage} />
     </div>
   )
 }
