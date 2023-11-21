@@ -11,6 +11,9 @@ export function App() {
       {/* CSS de componente*/}
       <MyComponent />
       <p>Este parágrafo é do App.jsx</p>
+
+      {/* Inline CSS*/}
+      <p style={{color: "blue", backgroundColor: "lightgray", padding: "25px", borderTop: "2px solid red"}}>Este elemento foi estilizado de forma Inline</p>
     </div>
   )
 }
