@@ -1,0 +1,14 @@
+.container {
+    padding: 15px;
+    width: 200px;
+    border: 2px solid red;
+}
+
+.title {
+    color: red;
+    font-size: 18px;
+}
+
+.paragraph {
+    font-weight: bold;
+}
