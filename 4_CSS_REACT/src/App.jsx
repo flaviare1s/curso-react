@@ -10,9 +10,7 @@ export function App() {
       
       {/* CSS de componente*/}
       <MyComponent />
-      <p>Este parágrafo é do AppComponent</p>
-      <p className="my-comp-paragraphy">Esse também é do componente</p>
-      
+      <p>Este parágrafo é do App.jsx</p>
     </div>
   )
 }
