@@ -9,7 +9,7 @@ export function App() {
   return (
     <div>
       <h1>Forms</h1>
-      < MyForm />
+      < MyForm user={{name: "Josias", email: "josias@gmail.com"}} />
     </div>
   )
 }
