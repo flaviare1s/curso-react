@@ -19,6 +19,10 @@ export const MyForm = (user) => {
     console.log("Enviando o formulário")
     console.log(name)
     console.log(email)
+
+    // 7. Limpar formulário:
+    setName("")
+    setEmail("")
    }
 
   return (
