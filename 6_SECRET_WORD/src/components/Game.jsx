@@ -12,7 +12,7 @@ export const Game = ({verifyLetter}) => {
         </h3>
         <div className='wordContainer'>
           <span className='letter'>A</span>
-          <span className="blackSquare"></span>
+          <span className="blankSquare"></span>
         </div>
         <div className='letterContainer'>
           <p>Tente adivinhar a letra da palavra:</p>
