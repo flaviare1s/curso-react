@@ -18,7 +18,37 @@ export function App() {
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordsList)
 
+  const [picedkWord, setPickedWord] = useState("")
+  const [pickedCategory, setPickCategory] = useState("")
+  const [letters, setLetters] = useState("")
+
+  const pickWordAndCategory = () => {
+    const categories = Object.keys(words)
+    const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
+
+    console.log(category)
+
+    const word = words[category][Math.floor(Math.random() * words[category].length)]
+
+    console.log(word)
+
+    return {word, category}
+  }
+
   const startGame = () => {
+    const {word, category} = pickWordAndCategory()
+
+    let wordLetters = word.split("")
+
+    wordLetters = wordLetters.map((l) => l.toLowerCase()) 
+
+    console.log(wordLetters)
+    console.log(word, category)
+
+    setPickedWord(word)
+    setPickCategory(category)
+    setLetters(letters)
+
     setGameStage(stages[1].name)
   }
 
