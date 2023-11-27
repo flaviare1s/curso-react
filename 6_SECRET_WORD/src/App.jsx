@@ -14,6 +14,8 @@ const stages = [
   {id: 3, name: 'end'},
 ]
 
+const guessesNumber = 3
+
 export function App() {
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordsList)
@@ -77,13 +79,23 @@ export function App() {
 
       setGuesses((actualGuesses) => actualGuesses - 1)
     }
-
-    console.log(guessedLetters)
-    console.log(wrongLetters)
-
   }
 
+  const clearLetterStates = () => {
+    setGuessedLetters([])
+    setWrongLetters([])
+  }
+
+  useEffect(() => {
+    if(guesses <= 0) {
+      clearLetterStates()
+      setGameStage(stages[2].name)
+    }
+  }, [guesses])
+
   const retry = () => {
+    setScore(0)
+    setGuesses(guessesNumber)
     setGameStage(stages[0].name)
   }
 
