@@ -74,6 +74,8 @@ export function App() {
         ...actualGuessedLetters, 
         normalizedLetter
       ])
+
+      setGuesses((actualGuesses) => actualGuesses - 1)
     }
 
     console.log(guessedLetters)
